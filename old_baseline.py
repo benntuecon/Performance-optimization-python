@@ -8,15 +8,17 @@ import nltk
 from nltk.corpus import stopwords
 
 
-stopwords_set = stopwords.words('english')
+stopwords_set = set(stopwords.words('english'))
 
-def read_in_chunks(file_object ):
+
+def read_in_chunks(file_object):
     """
     Lazy function (generator) to read a file piece by piece.
     return a tuple of data and time taken to read the data
     """
-    while (start_time:= time.perf_counter()) and (data:=file_object.read()):
+    while (start_time := time.perf_counter()) and (data := file_object.read()):
         yield data, time.perf_counter() - start_time
+
 
 def get_top_k_words(file_name, k):
     word_count = defaultdict(int)
@@ -28,7 +30,7 @@ def get_top_k_words(file_name, k):
     with open(file_name) as f:
         for piece, io_time in read_in_chunks(f):
             total_io_time += io_time
-            
+
             # Start time of CPU operation
             start_cpu_time = time.perf_counter()
 
@@ -41,7 +43,7 @@ def get_top_k_words(file_name, k):
 
             # Update total CPU time
             total_cpu_time += (end_cpu_time - start_cpu_time)
-                
+
     # get top k words
     start_cpu_time = time.perf_counter()
     top_k = heapq.nlargest(k, word_count.items(), key=lambda i: i[1])
@@ -56,6 +58,7 @@ def get_top_k_words(file_name, k):
 
     return top_k
 
+
 # You can call the function like this:
-for word, count in get_top_k_words('dataset/data_300MB.txt', 10):
+for word, count in get_top_k_words('../dataset/data_2.5GB.txt', 10):
     print(f'{word}: {count:-20}')
