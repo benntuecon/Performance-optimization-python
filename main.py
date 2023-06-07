@@ -1,29 +1,32 @@
-import re
-import urllib.request
-import collections
-from typing import List
+from utils.tracking import track_performance_profile
 
-def get_stop_words() -> List[str]:
-    url = "https://gist.github.com/sebleier/554280"
-    response = urllib.request.urlopen(url)
-    long_txt = response.read().decode()
-    stop_words = long_txt.splitlines()
-    return stop_words
+from baseline import base_solver
+from v1_word_count_imporvement import v1_solver
 
-def get_top_k_words(file_path: str, k: int, stop_words: List[str]) -> List[tuple]:
-    with open(file_path, 'r') as file:
-        data = file.read().replace('\n', '').lower()
-        data = re.sub('[^a-z\s]', '', data)
 
-        words = data.split(' ')
-        words = [word for word in words if word not in stop_words]
+FILES = {
+    '50MB': 'small_50MB_dataset.txt',
+    '300MB': '../dataset/data_300MB.txt',
+    '2.5GB': '../dataset/data_2.5GB.txt',
+    '16GB': '../dataset/data_16GB.txt',
+}
 
-        word_count = collections.Counter(words)
-        top_k_words = word_count.most_common(k)
+K = 10
 
-    return top_k_words
 
-# Usage:
-stop_words = get_stop_words()
-top_k_words = get_top_k_words('small_50MB_dataset.txt', 10, stop_words)
-print(top_k_words)
+@track_performance_profile
+def baseline_exp():
+    base_solver.top_k(FILES['50MB'], K)
+
+
+@track_performance_profile
+def v1_exp():
+    v1_solver.top_k(FILES['50MB'], K)
+
+
+def main():
+    baseline_exp()
+
+
+if __name__ == '__main__':
+    main()

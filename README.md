@@ -41,13 +41,11 @@ For the serial different optimization methods, please check the corresponding fo
 2. Optimize algorithm and data structure
    1. Word counting part:
       1. choosing between `dict`, `defaultdict`, `Counter`, `self-implmented trie`
-      2. choosing between `list`, `set`
-      3. using two pointers to avoid unnecessary string copy
+      2. using two pointers to avoid unnecessary string copy
 
    2.  Sort part:
        1.  heapq `nlargest`
        2.  `bubble sort` for small k, `k = 10` for example.
-
 
 3. Leverage Parallel Processing: 
    
@@ -101,3 +99,5 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 ### Baseline results (16GB file): N/A (too slow to finish)
 ----
 
+
+### 
