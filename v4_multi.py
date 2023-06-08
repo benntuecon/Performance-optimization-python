@@ -33,15 +33,16 @@ class MultiProcessingSolution:
 
     def process_file_multiprocessing(self, file_name, k=10):
         file_size = os.path.getsize(file_name)
-        available_ram = psutil.virtual_memory().available
+        available_ram = psutil.virtual_memory().available * 0.95
         cpu_count = multiprocessing.cpu_count()
 
         # Calculate the range for each process based on available RAM
-        chunk_size = min(available_ram, file_size) // cpu_count
-        num_chunks = file_size // (chunk_size*0.95)  # 5% buffer
+        chunk_size = min(available_ram, file_size) // cpu_count // 1024 // 1024
+        chunk_size *= (1024 * 1024)
+        num_chunks = file_size // (chunk_size)
 
         ranges = [(i * chunk_size, (i + 1) * chunk_size)
-                  for i in range(num_chunks)]
+                  for i in range(int(num_chunks))]
         # Make sure the last chunk reads till the end of file
         ranges[-1] = (ranges[-1][0], file_size)
 

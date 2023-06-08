@@ -13,7 +13,7 @@ import argparse
 FILES = {
     '50': 'small_50MB_dataset.txt',
     '300': '../dataset/data_300MB.txt',
-    '2.5': '../dataset/data_2.5GB.txt',
+    '2-5': '../dataset/data_2.5GB.txt',
     '16': '../dataset/data_16GB.txt',
 }
 
