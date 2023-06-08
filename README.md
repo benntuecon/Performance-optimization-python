@@ -99,13 +99,20 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 ### Baseline results (16GB file): N/A (too slow to finish)
 ----
 
-
-### Two pointers optimization results (300MB file):
-
 ### Two pointers optimization results (50MB file):
 
+### Two pointers optimization results (300MB file):
+### Two pointers optimization results (2.5GB file):
+### multiprocessing results (16GB file): (FAILED out of memory)
+---
 
+### multiprocessing optimization results (50MB file):
 
+### multiprocessing results (300MB file):
+### multiprocessing results (2.5GB file):
+### multiprocessing results (16GB file): (FAILED out of memory)
+### compiled optimization results (50MB file):
 
-
-### Two pointers results (300MB file):
+### compiled optimization results (300MB file):
+### compiled multiprocessing results (2.5GB file):
+### compiled multiprocessing results (16GB file): (FAILED out of memory)
