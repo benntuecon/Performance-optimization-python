@@ -64,7 +64,22 @@ For the serial different optimization methods, please check the corresponding fo
 ------------------
 ## Results
 
+### Baseline results (50MB file):
+#### 194245 function calls in ***2.611*** seconds 
+[('–', 45847), ('would', 21935), ('us', 18242), ('economic', 15389), ('new', 15365), ('one', 14078), ('countries', 13501), ('political', 12547), ('even', 12466), ('also', 12051)]
+
+| ncalls | tottime | percall | cumtime | percall | tottime (%) | filename:lineno(function) |
+|--------|---------|---------|---------|---------|-------------|---------------------------|
+| 1      | 0.953   | 0.953   | 0.953   | 0.953   | 32.58% | baseline.py:31(count_words) |
+| 1      | 0.859   | 0.859   | 0.859   | 0.859   | 29.38% | baseline.py:46(<listcomp>) |
+| 1      | 0.334   | 0.334   | 0.334   | 0.334   | 11.42% | {method 'split' of 'str' objects} |
+| 1      | 0.233   | 0.233   | 0.233   | 0.233   | 7.97% | {method 'lower' of 'str' objects} |
+| 1      | 0.065   | 0.065   | 2.611   | 2.611   | 2.22% | main.py:24(baseline_exp) |
+| 2      | 0.059   | 0.030   | 0.092   | 0.046   | 2.02% | {method 'read' of '_io.TextIOWrapper' objects} |
+| 1      | 0.058   | 0.058   | 0.075   | 0.075   | 1.98% | heapq.py:523(nlargest) |
+
 ### Baseline results (300MB file):
+[('european', 316717), ('mr', 210161), ('would', 179735), ('also', 175905), ('-', 162852), ('must', 153791), ('commission', 138407), ('president,', 125699), ('member', 124358), ('like', 108992)]
 #### 291281 function calls in ***13.753 seconds***
 
 Here is the given text transformed into a Markdown table with an additional column representing the percentage of total time:
@@ -82,6 +97,7 @@ Here is the given text transformed into a Markdown table with an additional colu
 Note: The percentages in the 'tottime (%)' column were calculated as follows: `tottime for each function` / `total time of all functions (13.753 seconds)` * 100%. The percentages are rounded to two decimal places.
 
 ### Baseline results (2.5GB file): 
+[('said', 1575355), ('-', 1473480), ('would', 908988), ('one', 878037), ('new', 833232), ('said.', 726393), ('also', 716495), ('last', 688663), ('de', 640313), ('two', 615817)]
 #### 3476811 function calls in ***712.093 seconds***
 
 | ncalls | tottime | percall | cumtime | percall | tottime (%) | filename:lineno(function) |
@@ -97,9 +113,9 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 Note: The percentages in the 'tottime (%)' column were calculated as follows: `tottime for each function` / `total time of all functions (712.093 seconds)` * 100%. The percentages are rounded to two decimal places.
 
 ### Baseline results (16GB file): N/A (too slow to finish)
+[('said', 10455872), ('would', 5794275), ('new', 5510611), ('one', 5390757), ('-', 5327377), ('said.', 4710820), ('also', 4552224), ('last', 4028819), ('two', 3842831), ('first', 3660769)]
 ----
 
-### Two pointers optimization results (50MB file):
 
 ### Two pointers optimization results (300MB file):
 ---
@@ -150,6 +166,5 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 
 
 #### (2.5GB file): 
-#### 
 #### (16GB file): 
 #### 9479072 function calls (9479015 primitive calls) in ***3730.872*** seconds
