@@ -102,7 +102,6 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 ### Two pointers optimization results (50MB file):
 
 ### Two pointers optimization results (300MB file):
-### Two pointers optimization results (2.5GB file):
 ---
 ### multiprocessing results (16GB file): (FAILED out of memory)
 ### multiprocessing optimization results (50MB file):
@@ -132,11 +131,25 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 | 1      | 0.009   | 0.009   | 3.194   | 3.194   | 0.28% | main.py:45(v4_exp) |
 
 ### multiprocessing results (2.5GB file):
+####  3482003 function calls (3481946 primitive calls) in ***431.212*** seconds
+| ncalls | tottime | percall | cumtime | percall | tottime (%) | filename:lineno(function) |
+|--------|---------|---------|---------|---------|-------------|---------------------------|
+| 19     | 424.825 | 22.359  | 424.825 | 22.359  | 98.46% | {method 'acquire' of '_thread.lock' objects} |
+| 1      | 5.099   | 5.099   | 6.165   | 6.165   | 1.18% | v4_multi.py:22(top_k) |
+| 1      | 0.742   | 0.742   | 1.066   | 1.066   | 0.17% | heapq.py:523(nlargest) |
+| 3476762| 0.324   | 0.000   | 0.324   | 0.000   | 0.08% | v4_multi.py:28(<lambda>) |
+| 1      | 0.114   | 0.114   | 431.212 | 431.212 | 0.03% | main.py:45(v4_exp) |
+| 9      | 0.028   | 0.003   | 0.028   | 0.003   | 0.01% | {built-in method _posixsubprocess.fork_exec} |
+| 46     | 0.025   | 0.001   | 0.025   | 0.001   | 0.01% | {built-in method posix.waitpid} |
+
 
 ### multiprocessing results (16GB file): (FAILED out of memory)
-### compiled optimization results (50MB file):
+### compiled optimization results 
+#### (50MB file) 199434 function calls (199377 primitive calls) in ***0.967*** seconds
+####  (300MB file): 296482 function calls (296425 primitive calls) in ***2.743*** seconds
 
-### compiled optimization results (300MB file):
-### compiled multiprocessing results (2.5GB file):
-### compiled multiprocessing results (16GB file): 
+
+#### (2.5GB file): 
+#### 
+#### (16GB file): 
 #### 9479072 function calls (9479015 primitive calls) in ***3730.872*** seconds

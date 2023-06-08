@@ -1,7 +1,8 @@
 
 from baseline import base_solver
 from v1_apply_two_pointer import v1_solver
-from v3_GPT import v3_solver
+from v2_sorting_improvement import v2_solver
+from v3_threading import v3_solver
 from v4_multi import v4_solver
 from v5_compile_and_multi import v5_solver
 from utils.tracking import track_performance_profile
@@ -13,7 +14,7 @@ import argparse
 FILES = {
     '50': 'small_50MB_dataset.txt',
     '300': '../dataset/data_300MB.txt',
-    '2-5': '../dataset/data_2.5GB.txt',
+    '2.5': '../dataset/data_2.5GB.txt',
     '16': '../dataset/data_16GB.txt',
 }
 
@@ -34,12 +35,12 @@ def v1_exp(file_code='50'):
 
 @track_performance_profile
 def v2_exp(file_code='50'):
-    print(v1_solver.top_k(FILES[file_code], K))
+    print(v2_solver.top_k(FILES[file_code], K))
 
 
 @track_performance_profile
 def v3_exp(file_code='50'):
-    print(v1_solver.top_k(FILES[file_code], K))
+    print(v3_solver.top_k(FILES[file_code], K))
 
 
 @track_performance_profile
