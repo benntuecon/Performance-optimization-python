@@ -49,7 +49,7 @@ class MultiProcessingSolution:
         # Create a Pool of subprocesses
         with multiprocessing.Pool() as pool:
             results = pool.starmap(self.process_file, [(
-                file_name, start, end) for start, end in ranges])
+                file_name, int(start), int(end)) for start, end in ranges])
 
         top_k = self.top_k(results, k)
         return top_k

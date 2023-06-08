@@ -121,6 +121,16 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 
 ### multiprocessing results (300MB file):
 #### 296482 function calls (296425 primitive calls) in ***3.194*** seconds
+| ncalls | tottime | percall | cumtime | percall | tottime (%) | filename:lineno(function) |
+|--------|---------|---------|---------|---------|-------------|---------------------------|
+| 19     | 2.699   | 0.142   | 2.699   | 0.142   | 84.29% | {method 'acquire' of '_thread.lock' objects} |
+| 1      | 0.314   | 0.314   | 0.404   | 0.404   | 9.81% | v4_multi.py:22(top_k) |
+| 1      | 0.064   | 0.064   | 0.090   | 0.090   | 2.00% | heapq.py:523(nlargest) |
+| 291235 | 0.026   | 0.000   | 0.026   | 0.000   | 0.81% | v4_multi.py:28(<lambda>) |
+| 9      | 0.026   | 0.003   | 0.026   | 0.003   | 0.81% | {built-in method _posixsubprocess.fork_exec} |
+| 47     | 0.026   | 0.001   | 0.026   | 0.001   | 0.81% | {built-in method posix.waitpid} |
+| 1      | 0.009   | 0.009   | 3.194   | 3.194   | 0.28% | main.py:45(v4_exp) |
+
 ### multiprocessing results (2.5GB file):
 
 ### multiprocessing results (16GB file): (FAILED out of memory)
@@ -128,4 +138,5 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 
 ### compiled optimization results (300MB file):
 ### compiled multiprocessing results (2.5GB file):
-### compiled multiprocessing results (16GB file): (FAILED out of memory)
+### compiled multiprocessing results (16GB file): 
+#### 9479072 function calls (9479015 primitive calls) in ***3730.872*** seconds
