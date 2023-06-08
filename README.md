@@ -100,4 +100,12 @@ Note: The percentages in the 'tottime (%)' column were calculated as follows: `t
 ----
 
 
-### 
+### Two pointers optimization results (300MB file):
+
+### Two pointers optimization results (50MB file):
+
+
+
+
+
+### Two pointers results (300MB file):

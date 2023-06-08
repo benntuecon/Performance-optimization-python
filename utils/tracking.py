@@ -1,6 +1,7 @@
 import timeit
 from functools import wraps
 import cProfile
+from datetime import datetime as time
 
 
 def log_path(kwargs): return f'logs/{kwargs}'
@@ -29,7 +30,6 @@ def track_performance_profile(func):
 
         profiler.disable()
         profiler.print_stats(sort='time')
-        profiler.dump_stats(log_path(kwargs=kwargs))
 
         return result
     return wrapper
