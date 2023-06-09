@@ -33,3 +33,19 @@ def track_performance_profile(func):
 
         return result
     return wrapper
+
+
+def track_time(list_if_time):
+    def decorator(fn):
+        @wraps(fn)
+        def inner(*args, **kwargs):
+            start_time = time.now()
+            # print(*args, **kwargs)
+            result = fn(*args, **kwargs)
+            end_time = time.now()
+            elapsed_time = end_time - start_time
+            fn.__doc__ += f'\n ** The time spend of the execution will be append to the function result**\n'
+            list_if_time.append(elapsed_time)
+            return result
+        return inner
+    return decorator

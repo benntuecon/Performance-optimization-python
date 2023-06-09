@@ -1,6 +1,7 @@
 import heapq
 from collections import defaultdict
 from typing import Callable
+from utils.tracking import track_time
 
 # uncomment this for the first time run
 # nltk.download('stopwords')
@@ -16,7 +17,11 @@ stopwords_set = set(stopwords.words('english'))
 
 
 class BaselineSolution:
+    sort_time: list[int] = []
+    read_time: list[int] = []
+    count_time: list[int] = []
 
+    @track_time(read_time)
     def read_file(self, f):
         """
         Lazy function (generator) to read a file piece by piece.
@@ -28,11 +33,13 @@ class BaselineSolution:
                 break
             yield data
 
+    @track_time(count_time)
     @staticmethod
     def count_words(word_counts, words):
         for word in words:
             word_counts[word] += 1
 
+    @track_time(sort_time)
     @staticmethod
     def sorting(k, word_counts):
         return heapq.nlargest(
@@ -48,6 +55,10 @@ class BaselineSolution:
                 self.count_words(word_counts, words)
         # get top k words
         top_k = self.sorting(k, word_counts)
+        print(f'read time: {sum(self.read_time)}')
+        print(f'count time: {sum(self.count_time)}')
+        print(f'sort time: {sum(self.sort_time)}')
+
         return top_k
 
 

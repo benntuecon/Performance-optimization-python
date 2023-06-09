@@ -1,5 +1,11 @@
 # Data Engineering Assignment 1
 
+## Use
+
+```
+python main.py --exp [baseline or v1-v5] --file_code [50 or 300 or 2.5 or 16]
+```
+
 
 ## Goal 
 
