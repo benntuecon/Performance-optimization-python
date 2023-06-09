@@ -2,8 +2,27 @@
 
 ## Use
 
-```
+### python benchmark
+
+```sh
 python main.py --exp [baseline or v1-v5] --file_code [50 or 300 or 2.5 or 16]
+```
+
+### Rust benchmark (compiled with `cargo build --release`)
+```sh
+$ ./top_k_word_count.bin PATH_TO_.../dataset/data_2.5GB.txt 10
+CPU cores: 8
+Available RAM: 6822528 KB
+File size: 2581290054 bytes
+Chinking multiplier: 1
+Optimized chunk size: 322661256 bytes
+##############################################
+
+
+said: 1575369      -: 1473577      would: 908994      one: 878057      new: 833243      said.: 726400      also: 716496      last: 688671      de: 640352      two: 615823      Time elapsed is: 15.037854875s
+```
+```
+
 ```
 
 

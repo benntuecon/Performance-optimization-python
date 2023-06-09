@@ -39,12 +39,10 @@ def track_time(list_if_time):
     def decorator(fn):
         @wraps(fn)
         def inner(*args, **kwargs):
-            start_time = time.now()
-            # print(*args, **kwargs)
+            start_time = timeit.default_timer()
             result = fn(*args, **kwargs)
-            end_time = time.now()
+            end_time = timeit.default_timer()
             elapsed_time = end_time - start_time
-            fn.__doc__ += f'\n ** The time spend of the execution will be append to the function result**\n'
             list_if_time.append(elapsed_time)
             return result
         return inner

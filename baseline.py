@@ -33,14 +33,14 @@ class BaselineSolution:
                 break
             yield data
 
-    @track_time(count_time)
     @staticmethod
+    @track_time(count_time)
     def count_words(word_counts, words):
         for word in words:
             word_counts[word] += 1
 
-    @track_time(sort_time)
     @staticmethod
+    @track_time(sort_time)
     def sorting(k, word_counts):
         return heapq.nlargest(
             k, word_counts.items(), key=lambda i: i[1])

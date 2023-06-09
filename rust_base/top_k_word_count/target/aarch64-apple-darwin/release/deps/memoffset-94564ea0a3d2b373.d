@@ -1,0 +1,10 @@
+/Users/Ben/code/learning/usf/data_engineering/Performance-optimization-python/rust_base/top_k_word_count/target/aarch64-apple-darwin/release/deps/memoffset-94564ea0a3d2b373.rmeta: /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/lib.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/raw_field.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/offset_of.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/span_of.rs
+
+/Users/Ben/code/learning/usf/data_engineering/Performance-optimization-python/rust_base/top_k_word_count/target/aarch64-apple-darwin/release/deps/libmemoffset-94564ea0a3d2b373.rlib: /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/lib.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/raw_field.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/offset_of.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/span_of.rs
+
+/Users/Ben/code/learning/usf/data_engineering/Performance-optimization-python/rust_base/top_k_word_count/target/aarch64-apple-darwin/release/deps/memoffset-94564ea0a3d2b373.d: /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/lib.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/raw_field.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/offset_of.rs /Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/span_of.rs
+
+/Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/lib.rs:
+/Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/raw_field.rs:
+/Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/offset_of.rs:
+/Users/Ben/.cargo/registry/src/index.crates.io-6f17d22bba15001f/memoffset-0.8.0/src/span_of.rs:
